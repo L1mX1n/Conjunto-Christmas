@@ -1,0 +1,221 @@
+body {
+    background-color: rosybrown;
+}
+
+#container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border: 0.1px solid white;
+    left: -400px;
+    bottom: 300px;
+    animation-name: caminar;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+}
+.navidad {
+    position: relative;
+    background-color: red;
+    margin: auto;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    padding: 0.05em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#container .gorra {
+    position: absolute;
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    left: 0px;
+    right: 0px;
+    top: 100px;
+    margin: auto;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent; 
+    border-bottom: 90.6px solid red;
+    border-radius: 10%;
+    z-index: 1;
+}
+
+#container .punto-gorra {
+    position: absolute;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    left: 0px;
+    right: 0px;
+    top: 90px;
+    margin: auto;
+    border-radius: 100%;
+}
+
+#container .gorra-linia {
+    position: absolute;
+    background-color: white;
+    width: 95px;
+    height: 5px;
+    left: 0px;
+    right: 0px;
+    top: 180px;
+    margin: auto;
+    z-index: 1;
+    border-radius: 10%;
+}
+
+#container .cabeza {
+    background-color: white;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    right: 0px;
+    top: 170px;
+    margin: auto;
+    border-radius: 100%;
+}
+
+#container .ojos {
+    background-color: black;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 50px;
+    right: 0px;
+    top: 200px;
+    margin: auto;
+    border-radius: 100%;
+    z-index: 5;
+}
+
+#container .nariz {
+    position: absolute;
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    left: 120px;
+    right: 0px;
+    top: 200px;
+    margin: auto;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent; 
+    border-bottom: 50.6px solid orangered;
+    border-radius: 10%;
+    z-index: -1;
+    transform: rotate(90deg);
+}
+
+#container .cuerpo {
+    background-color: white;
+    position: absolute;
+    width: 135px;
+    height: 135px;
+    left: 0px;
+    right: 0px;
+    top: 250px;
+    margin: auto;
+    z-index: 3;
+    border-radius: 100%;
+}
+
+#container .brazo-izq {
+    background-color: #742d22;
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    left: 0px;
+    right: 0px;
+    top: 290px;
+    margin: auto;
+    z-index: 2;
+    animation-name: brazo-izq;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 10%;
+}
+
+#container .brazo-der {
+    background-color: #742d22;
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    left: 0px;
+    right: 0px;
+    top: 290px;
+    margin: auto;
+    z-index: 3;
+    animation-name: brazo-der;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 15%;
+}
+
+#container .pierna-izq {
+    background-color: white;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    right: 0px;
+    top: 370px;
+    margin: auto;
+    animation-name: pierna-izq;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+#container .pierna-der {
+    background-color: white;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    right: 0px;
+    top: 370px;
+    margin: auto;
+    animation-name: pierna-der;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 100%;
+}
+
+@keyframes brazo-izq {
+    0%   {transform: translate(10px) rotate(-20deg);}
+    25%  {transform: translate(-10px) rotate(20deg);}
+    50%  {transform: translate(10px) rotate(-20deg);}
+    75%  {transform: translate(-10px) rotate(20deg);}
+    100% {transform: translate(10px) rotate(-20deg);}
+}
+
+@keyframes brazo-der {
+    0%   {transform: translate(-10px) rotate(20deg);}
+    25%  {transform: translate(10px) rotate(-20deg);}
+    50%  {transform: translate(-10px) rotate(20deg);}
+    75%  {transform: translate(10px) rotate(-20deg);}
+    100% {transform: translate(-10px) rotate(20deg);}
+}
+
+@keyframes pierna-izq {
+    0%   {transform: translate(10px) rotate(-20deg);}
+    25%  {transform: translate(-10px) rotate(20deg);}
+    50%  {transform: translate(10px) rotate(-20deg);}
+    75%  {transform: translate(-10px) rotate(20deg);}
+    100% {transform: translate(10px) rotate(-20deg);}
+}
+
+@keyframes pierna-der {
+    0%   {transform: translate(-10px) rotate(20deg);}
+    25%  {transform: translate(10px) rotate(-20deg);}
+    50%  {transform: translate(-10px) rotate(20deg);}
+    75%  {transform: translate(10px) rotate(-20deg);}
+    100% {transform: translate(-10px) rotate(20deg);}
+}
+
+@keyframes caminar {
+100%  {transform: translate(500px);}
+}
