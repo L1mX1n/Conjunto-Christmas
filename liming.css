@@ -1,17 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: rosybrown;
 }
 
+#animacion {
+    position: absolute;
+    width: 2000px;
+    height: 1000px;
+    margin: auto;
+    border: 0.1px solid yellow;
+    left: 0;
+    top: 100px;
+    bottom: 1;
+    right: 0;
+}
+
 #container {
-    position: relative;
+    position: absolute;
     width: 500px;
     height: 500px;
     margin: auto;
     border: 0.1px solid white;
-    left: -400px;
-    bottom: 300px;
+    left: 0;
+    top: 100px;
+    bottom: 0;
+    right: 1000;
     animation-name: caminar;
-    animation-duration: 10s;
+    animation-duration: 5s;
     animation-iteration-count: 1;
 }
 .navidad {

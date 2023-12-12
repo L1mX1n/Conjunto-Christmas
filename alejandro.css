@@ -1,92 +1,131 @@
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+#alejandro {
+    position: absolute;
+    width: 350px;
+    height: 600px;
+    margin: auto;
+    border: 0.1px solid white;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 1700px;
+    animation-name: caminar;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
 }
 
-#contenidor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 200px;
-}
-
-#contenidor .cabeza {
-    width: 65px;
-    height: 108px;
-    background-color: green;
-}
-
-#contenidor .ojos {
-    text-align: left;
-    margin-top: 40px;
-}
-
-#contenidor .ojos span {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    margin:  10px;
-}
-
-#torso {
-    width: 65px;
-    height: 150px;
-    background-color: darkred;
-}
-
-#torso .brazo {
-    width: 20px;
+#alejandro .cabeza {
+    background-color: greenyellow;
+    position: absolute;
+    width: 100px;
     height: 120px;
-    margin-left: 12px;
-    background-color: red;
-    animation-name: brazo;
+    left: 0px;
+    right: 0px;
+    top: 140px;
+    margin: auto;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+#alejandro .ojos {
+    background-color: white;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 50px;
+    right: 0px;
+    top: 180px;
+    margin: auto;
+    border-radius: 100%;
+    z-index: 5;
+}
+
+#alejandro .nariz {
+    position: absolute;
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    left: 100px;
+    right: 0px;
+    top: 200px;
+    margin: auto;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+#alejandro .cuerpo {
+    background-color: greenyellow;
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    left: 0px;
+    right: 0px;
+    top: 250px;
+    margin: auto;
+    z-index: 10;
+    border-radius: 100%;
+}
+
+#alejandro .brazo-izq {
+    background-color: green;
+    position: absolute;
+    width: 10px;
+    height: 200px;
+    left: 0px;
+    right: 0px;
+    top: 290px;
+    margin: auto;
+    z-index: 9;
+    animation-name: brazo-izq;
     animation-duration: 2s;
     animation-iteration-count: infinite;
     border-radius: 10%;
 }
 
-#pierna1 {
-    width: 20px;
-    height: 110px;
-    background-color: red;
-    animation-name: pierna1;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    border-radius: 1%;
-}
-
-#pierna1 .pierna2 {
-    width: 20px;
-    height: 110px;
-    bottom: 190px;
+#alejandro .brazo-der {
+    background-color: green;
+    position: absolute;
+    width: 10px;
+    height: 200px;
+    left: 0px;
+    right: 0px;
+    top: 290px;
     margin: auto;
-    background-color: red;
-    animation-name: pierna2;
+    z-index: 11;
+    animation-name: brazo-der;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    border-radius: 1%;
+    border-radius: 15%;
 }
 
-#contenidor .gorro {
-    width: 0;
-    height: 0;
-    bottom: 260px;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid darkred;
+#alejandro .pierna-izq {
+    background-color: green;
+    position: absolute;
+    width: 10px;
+    height: 150px;
+    left: 0px;
+    right: 0px;
+    top: 440px;
+    margin: auto;
+    animation-name: pierna-izq;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 15%;
+    z-index: 2;
 }
 
-#contenidor .rectangulo {
-    width: 105px; 
-    height: 26px;
-    margin-left: 5px;
-    border: 3px solid #555;
-    background: white;
-    z-index: 1;
+#alejandro .pierna-der {
+    background-color: green;
+    position: absolute;
+    width: 10px;
+    height: 150px;
+    left: 0px;
+    right: 0px;
+    top: 440px;
+    margin: auto;
+    animation-name: pierna-der;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 15%;
 }
 
 @keyframes brazo { 
@@ -112,3 +151,7 @@
     75%  {transform: translate(10px) rotate(-20deg);}
     100% {transform: translate(-10px) rotate(20deg);}
 }
+
+@keyframes caminar {
+    100%  {transform: translate(500px);}
+    }
