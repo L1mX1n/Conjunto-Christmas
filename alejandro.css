@@ -5,7 +5,7 @@
     font-family: sans-serif;
 }
 
-.contenidor {
+#contenidor {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,18 +13,18 @@
     margin-top: 200px;
 }
 
-.cabeza {
+#contenidor .cabeza {
     width: 65px;
     height: 108px;
     background-color: green;
 }
 
-.ojos {
+#contenidor .ojos {
     text-align: left;
     margin-top: 40px;
 }
 
-.ojos span {
+#contenidor .ojos span {
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -32,13 +32,13 @@
     margin:  10px;
 }
 
-.torso {
+#torso {
     width: 65px;
     height: 150px;
     background-color: darkred;
 }
 
-.brazo {
+#torso .brazo {
     width: 20px;
     height: 120px;
     margin-left: 12px;
@@ -49,7 +49,7 @@
     border-radius: 10%;
 }
 
-.pierna1 {
+#pierna1 {
     width: 20px;
     height: 110px;
     background-color: red;
@@ -59,7 +59,7 @@
     border-radius: 1%;
 }
 
-.pierna2 {
+#pierna1 .pierna2 {
     width: 20px;
     height: 110px;
     bottom: 190px;
@@ -71,7 +71,7 @@
     border-radius: 1%;
 }
 
-.gorro {
+#contenidor .gorro {
     width: 0;
     height: 0;
     bottom: 260px;
@@ -80,7 +80,7 @@
     border-bottom: 100px solid darkred;
 }
 
-.rectangulo {
+#contenidor .rectangulo {
     width: 105px; 
     height: 26px;
     margin-left: 5px;
