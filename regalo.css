@@ -1,0 +1,52 @@
+#contenidor{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    left: 400px;
+    animation-name: caminar1;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+}
+
+.caja{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    left: 20px;
+    border: 0.1px solid black;
+    background-color: brown;
+}
+
+.tapa{
+    position: absolute;
+    width: 145px;
+    height: 20px;
+    margin: auto;
+    border: 0.1px solid black;
+    background-color: brown;
+    z-index: 1;
+}
+
+.lazo-der{
+    position: absolute;
+    width: 100px;
+    height: 15px;
+    margin: auto;
+    bottom: 35px;
+    background-color: black;
+}
+
+.lazo-izq{
+    position: absolute;
+    width: 15px;
+    height: 100px;
+    margin: auto;
+    left: 40px;
+    background-color: black;
+}
+
+@keyframes caminar1 {
+    100%  {transform: translate(500px);}
+    }
