@@ -213,6 +213,9 @@
     left: 1000;
     right: 0;
     margin: auto;
+    display: none;
+    animation-name: arbol;
+    animation-iteration-count: 1;
 }
 
 .tronco{
@@ -355,4 +358,9 @@
 
 @keyframes caminar {
     100%  {transform: translate(500px);}
-    }
+}
+
+@keyframes arbol {
+    {animation-delay: 5s;}
+    {display: block;}
+}
