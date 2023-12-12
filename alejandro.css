@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.contenidor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 200px;
+}
+
+.cabeza {
+    width: 65px;
+    height: 108px;
+    background-color: green;
+}
+
+.ojos {
+    text-align: left;
+    margin-top: 40px;
+}
+
+.ojos span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    margin:  10px;
+}
+
+.torso {
+    width: 65px;
+    height: 150px;
+    background-color: darkred;
+}
+
+.brazo {
+    width: 20px;
+    height: 120px;
+    margin-left: 12px;
+    background-color: red;
+    animation-name: brazo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 10%;
+}
+
+.pierna1 {
+    width: 20px;
+    height: 110px;
+    background-color: red;
+    animation-name: pierna1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 1%;
+}
+
+.pierna2 {
+    width: 20px;
+    height: 110px;
+    bottom: 190px;
+    margin: auto;
+    background-color: red;
+    animation-name: pierna2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 1%;
+}
+
+.gorro {
+    width: 0;
+    height: 0;
+    bottom: 260px;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid darkred;
+}
+
+.rectangulo {
+    width: 105px; 
+    height: 26px;
+    margin-left: 5px;
+    border: 3px solid #555;
+    background: white;
+    z-index: 1;
+}
+
+@keyframes brazo { 
+    0%   {transform: translate(-10px) rotate(20deg);}
+    25%  {transform: translate(10px) rotate(-20deg);}
+    50%   {transform: translate(-10px) rotate(20deg);}
+    75%  {transform: translate(10px) rotate(-20deg);}
+    100% {transform: translate(-10px) rotate(20deg);}
+}
+
+@keyframes pierna1 {
+    0%   {transform: translate(10px) rotate(-20deg);}
+    25%  {transform: translate(-10px) rotate(20deg);}
+    50%   {transform: translate(10px) rotate(-20deg);}
+    75%  {transform: translate(-10px) rotate(20deg);}
+    100% {transform: translate(10px) rotate(-20deg);}
+}
+
+@keyframes pierna2 {
+    0%   {transform: translate(-10px) rotate(20deg);}
+    25%  {transform: translate(10px) rotate(-20deg);}
+    50%  {transform: translate(-10px) rotate(20deg);}
+    75%  {transform: translate(10px) rotate(-20deg);}
+    100% {transform: translate(-10px) rotate(20deg);}
+}
