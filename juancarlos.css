@@ -204,6 +204,21 @@
     width: 900px;
     height: 900px;
     top: 130px;
+    animation-name:arbol;
+    animation-delay: 8s;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes arbol{
+    50%{
+        opacity: 1;
+        transition: opacity 1s ;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .tronco{
