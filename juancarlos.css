@@ -9,7 +9,7 @@
     left: 0;
     border: 0.1em solid white;
     animation-name: caminar;
-    animation-duration: 10s;
+    animation-duration: 5s;
     animation-iteration-count: 1;
 }
 
@@ -213,6 +213,11 @@
     left: 1000;
     right: 0;
     margin: auto;
+    opacity: 0;
+    animation-name: arbol;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
 }
 
 .tronco{
@@ -354,6 +359,17 @@
 }
 
 @keyframes caminar {
-    100%  {transform: translate(500px);}
+    100%  {transform: translate(1500px);}
 }
 
+@keyframes arbol {
+    0% {
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    100% {
+        opacity: 1;
+        transition: opacity 2s;
+    }
+}

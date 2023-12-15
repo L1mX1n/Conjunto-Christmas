@@ -9,7 +9,7 @@
     bottom: 0;
     right: 1700px;
     animation-name: caminar;
-    animation-duration: 8s;
+    animation-duration: 5s;
     animation-iteration-count: 1;
 }
 
@@ -153,5 +153,5 @@
 }
 
 @keyframes caminar {
-    100%  {transform: translate(500px);}
+    100%  {transform: translate(1500px);}
     }
