@@ -9,7 +9,6 @@ body {
 .suelo  {
     position:absolute;
     margin: auto;
-    width: ;
     height: 5px;
     top: 0;
     bottom: 0;
@@ -307,5 +306,5 @@ body {
 }
 
 @keyframes caminarliming {
-100%  {transform: translate(1500px);}
+100%  {transform: translate(900px);}
 }
