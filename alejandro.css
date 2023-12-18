@@ -1,19 +1,157 @@
-#contenidor{
-    position: relative;
-    width: 1000px;
-    height: 1000px;
-    margin:auto;
-    border: 0.1px solid black;
+#alejandro {
+    position: absolute;
+    width: 350px;
+    height: 600px;
+    margin: auto;
+    border: 0.1px solid white;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 1700px;
+    animation-name: caminar;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
 }
 
-#contenidor .cabeza{
+#alejandro .cabeza {
+    background-color: greenyellow;
+    position: absolute;
+    width: 100px;
+    height: 120px;
+    left: 0px;
+    right: 0px;
+    top: 140px;
+    margin: auto;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+#alejandro .ojos {
+    background-color: white;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 50px;
+    right: 0px;
+    top: 180px;
+    margin: auto;
+    border-radius: 100%;
+    z-index: 5;
+}
+
+#alejandro .nariz {}
+    position: absolute;
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    left: 100px;
+    right: 0px;
+    top: 200px;
+    margin: auto;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+#alejandro .cuerpo {
+    background-color: greenyellow;
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    left: 0px;
+    right: 0px;
+    top: 250px;
+    margin: auto;
+    z-index: 10;
+    border-radius: 100%;
+}
+
+#alejandro .brazo-izq {
     background-color: green;
     position: absolute;
-    top: 200px;
-    left: -0px;
-    width: 150px;
-    height: 150px;
+    width: 10px;
+    height: 200px;
+    left: 0px;
     right: 0px;
+    top: 290px;
     margin: auto;
-    border-radius: 5%
+    z-index: 9;
+    animation-name: brazo-izq;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 10%;
 }
+
+#alejandro .brazo-der {
+    background-color: green;
+    position: absolute;
+    width: 10px;
+    height: 200px;
+    left: 0px;
+    right: 0px;
+    top: 290px;
+    margin: auto;
+    z-index: 11;
+    animation-name: brazo-der;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 15%;
+}
+
+#alejandro .pierna-izq {
+    background-color: green;
+    position: absolute;
+    width: 10px;
+    height: 150px;
+    left: 0px;
+    right: 0px;
+    top: 440px;
+    margin: auto;
+    animation-name: pierna-izq;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 15%;
+    z-index: 2;
+}
+
+#alejandro .pierna-der {
+    background-color: green;
+    position: absolute;
+    width: 10px;
+    height: 150px;
+    left: 0px;
+    right: 0px;
+    top: 440px;
+    margin: auto;
+    animation-name: pierna-der;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 15%;
+}
+
+@keyframes brazo { 
+    0%   {transform: translate(-10px) rotate(20deg);}
+    25%  {transform: translate(10px) rotate(-20deg);}
+    50%   {transform: translate(-10px) rotate(20deg);}
+    75%  {transform: translate(10px) rotate(-20deg);}
+    100% {transform: translate(-10px) rotate(20deg);}
+}
+
+@keyframes pierna1 {
+    0%   {transform: translate(10px) rotate(-20deg);}
+    25%  {transform: translate(-10px) rotate(20deg);}
+    50%   {transform: translate(10px) rotate(-20deg);}
+    75%  {transform: translate(-10px) rotate(20deg);}
+    100% {transform: translate(10px) rotate(-20deg);}
+}
+
+@keyframes pierna2 {
+    0%   {transform: translate(-10px) rotate(20deg);}
+    25%  {transform: translate(10px) rotate(-20deg);}
+    50%  {transform: translate(-10px) rotate(20deg);}
+    75%  {transform: translate(10px) rotate(-20deg);}
+    100% {transform: translate(-10px) rotate(20deg);}
+}
+
+@keyframes caminar {
+    100%  {transform: translate(500px);}
+    }
