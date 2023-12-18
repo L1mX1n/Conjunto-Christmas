@@ -31,6 +31,7 @@ body {
 }
 
 #container {
+    opacity: 0%;
     position: absolute;
     width: 500px;
     height: 500px;
@@ -277,7 +278,7 @@ body {
     width: 500px;
     height: 500px;
     margin: auto;
-    border: 0.1px solid white;
+    border: 0px solid white;
     left: 180px;
     top: 100px;
     bottom: 0;
@@ -606,8 +607,10 @@ body {
 }
 
 @keyframes caminarliming {
-    100%  {transform: translate(840px);}
-    100%    {opacity: 1;}
+
+    0% { opacity: 100%;}
+    100%  {transform: translate(840px); opacity: 100%;}
+
 }
 
 @keyframes caminarlimingatras {
