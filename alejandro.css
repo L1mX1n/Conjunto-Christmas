@@ -3,13 +3,13 @@
     width: 350px;
     height: 600px;
     margin: auto;
-    border: 0.1px solid white;
+    border: 0px solid white;
     left: 0;
     top: 0;
     bottom: 0;
     right: 1700px;
     animation-name: caminar;
-    animation-duration: 8s;
+    animation-duration: 5s;
     animation-iteration-count: 1;
 }
 
@@ -153,5 +153,5 @@
 }
 
 @keyframes caminar {
-    100%  {transform: translate(500px);}
+    100%  {transform: translate(1500px);}
     }

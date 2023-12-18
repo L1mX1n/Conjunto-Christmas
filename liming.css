@@ -6,12 +6,24 @@ body {
     background-color: rosybrown;
 }
 
+.suelo  {
+    position:absolute;
+    margin: auto;
+    height: 5px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    z-index: -1;
+}
+
 #animacion {
     position: absolute;
     width: 2000px;
     height: 1000px;
     margin: auto;
-    border: 0.1px solid yellow;
+    border: 0px solid yellow;
     left: 0;
     top: 100px;
     bottom: 1;
@@ -23,15 +35,18 @@ body {
     width: 500px;
     height: 500px;
     margin: auto;
-    border: 0.1px solid white;
+    border: 0   px solid white;
     left: 0;
     top: 100px;
     bottom: 0;
     right: 1000;
-    animation-name: caminar;
+    animation-name: caminarliming;
     animation-duration: 5s;
     animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
+
+
 .navidad {
     position: relative;
     background-color: red;
@@ -40,7 +55,14 @@ body {
     color: white;
     text-align: center;
     padding: 0.05em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+    animation: aparecerYExpandir 2s forwards;
+    animation-delay: 10s;
 }
 
 #container .gorra {
@@ -107,6 +129,28 @@ body {
     margin: auto;
     border-radius: 100%;
     z-index: 5;
+    animation-name: desaparecer;
+    animation-duration: 0.1s;
+    animation-delay: 5s; 
+    animation-fill-mode: forwards; 
+}
+
+#container .ojos2 {
+    background-color: black;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 0px;
+    right: 50px;
+    top: 200px;
+    margin: auto;
+    border-radius: 100%;
+    z-index: 5;
+    opacity: 0;
+    animation-name: aparecer;
+    animation-duration: 0.1s;
+    animation-delay: 5s; 
+    animation-fill-mode: forwards;
 }
 
 #container .nariz {
@@ -124,6 +168,32 @@ body {
     border-radius: 10%;
     z-index: -1;
     transform: rotate(90deg);
+    animation-name: desaparecer;
+    animation-duration: 0.1s;
+    animation-delay: 5s; 
+    animation-fill-mode: forwards; 
+}
+
+#container .nariz2 {
+    position: absolute;
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    left: 0px;
+    right: 120px;
+    top: 200px;
+    margin: auto;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent; 
+    border-bottom: 50.6px solid orangered;
+    border-radius: 10%;
+    z-index: -1;
+    transform: rotate(-90deg);
+    opacity: 0;
+    animation-name: aparecer;
+    animation-duration: 0.1s;
+    animation-delay: 5s; 
+    animation-fill-mode: forwards;
 }
 
 #container .cuerpo {
@@ -153,7 +223,7 @@ body {
     animation-duration: 2s;
     animation-iteration-count: infinite;
     border-radius: 10%;
-}
+    }
 
 #container .brazo-der {
     background-color: #742d22;
@@ -202,6 +272,307 @@ body {
     border-radius: 100%;
 }
 
+#container2 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border: 0.1px solid white;
+    left: 180px;
+    top: 100px;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    animation-name: aparecer, caminarlimingatras;
+    animation-delay: 5s;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#container2 .gorra {
+    position: absolute;
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    left: 0px;
+    right: 0px;
+    top: 100px;
+    margin: auto;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent; 
+    border-bottom: 90.6px solid red;
+    border-radius: 10%;
+    z-index: 1;
+}
+
+#container2 .punto-gorra {
+    position: absolute;
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    left: 0px;
+    right: 0px;
+    top: 90px;
+    margin: auto;
+    border-radius: 100%;
+}
+
+#container2 .gorra-linia {
+    position: absolute;
+    background-color: white;
+    width: 95px;
+    height: 5px;
+    left: 0px;
+    right: 0px;
+    top: 180px;
+    margin: auto;
+    z-index: 1;
+    border-radius: 10%;
+}
+
+#container2 .cabeza {
+    background-color: white;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0px;
+    right: 0px;
+    top: 170px;
+    margin: auto;
+    border-radius: 100%;
+}
+
+#container2 .ojos {
+    background-color: black;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 0px;
+    right: 50px;
+    top: 200px;
+    margin: auto;
+    border-radius: 100%;
+    z-index: 5;
+}
+
+#container2 .nariz {
+    position: absolute;
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    left: 0px;
+    right: 120px;
+    top: 200px;
+    margin: auto;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent; 
+    border-bottom: 50.6px solid orangered;
+    border-radius: 10%;
+    z-index: -1;
+    transform: rotate(-90deg);
+}
+
+#container2 .cuerpo {
+    background-color: white;
+    position: absolute;
+    width: 135px;
+    height: 135px;
+    left: 0px;
+    right: 0px;
+    top: 250px;
+    margin: auto;
+    z-index: 3;
+    border-radius: 100%;
+}
+
+#container2 .brazo-izq {
+    background-color: #742d22;
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    left: 0px;
+    right: 0px;
+    top: 290px;
+    margin: auto;
+    z-index: 2;
+    animation-name: brazo-izq;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 10%;
+    }
+
+#container2 .brazo-der {
+    background-color: #742d22;
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    left: 0px;
+    right: 0px;
+    top: 290px;
+    margin: auto;
+    z-index: 3;
+    animation-name: brazo-der;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 15%;
+}
+
+#container2 .pierna-izq {
+    background-color: white;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    right: 0px;
+    top: 370px;
+    margin: auto;
+    animation-name: pierna-izq;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+#container2 .pierna-der {
+    background-color: white;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0px;
+    right: 0px;
+    top: 370px;
+    margin: auto;
+    animation-name: pierna-der;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    border-radius: 100%;
+}
+
+#regaloliming{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    left: 0px;
+    right: 0;
+    top: 0px;
+    bottom: 0;
+    border: 0px solid yellow;
+    z-index: 10;
+    animation-name: desaparecer;
+    animation-duration: 0.1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+#regaloliming .caja{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 0.1px solid black;
+    background-color: blue;
+    left: 10px;
+    right: 1;
+    top: 1;
+    bottom: 0;
+}
+
+#regaloliming .lazo-der{
+    position: absolute;
+    width: 98px;
+    height: 15px;
+    margin: auto;
+    background-color: black;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#regaloliming .lazo-izq{
+    position: absolute;
+    width: 15px;
+    height: 100px;
+    margin: auto;
+    left: 40px;
+    background-color: black;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#regaloliming2{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    left: 600px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border: 0px solid yellow;
+    z-index: 10;
+    opacity: 0;
+    animation-name: regaloliming2;
+    animation-duration: 1s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+
+#regaloliming2 .caja{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border: 0.1px solid black;
+    background-color: blue;
+    left: 10px;
+    right: 1;
+    top: 1;
+    bottom: 0;
+}
+
+#regaloliming2 .lazo-der{
+    position: absolute;
+    width: 98px;
+    height: 15px;
+    margin: auto;
+    background-color: black;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#regaloliming2 .lazo-izq{
+    position: absolute;
+    width: 15px;
+    height: 100px;
+    margin: auto;
+    left: 40px;
+    background-color: black;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.boton {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    margin: auto;
+    left: 0;
+    right: 2000px;
+    top: 60px;
+    bottom: 0;
+    border: 0.1px solid darkgray;
+    background-color: gray;
+}
+
 @keyframes brazo-izq {
     0%   {transform: translate(10px) rotate(-20deg);}
     25%  {transform: translate(-10px) rotate(20deg);}
@@ -234,6 +605,59 @@ body {
     100% {transform: translate(-10px) rotate(20deg);}
 }
 
-@keyframes caminar {
-100%  {transform: translate(500px);}
+@keyframes caminarliming {
+    100%  {transform: translate(840px);}
+    100%    {opacity: 1;}
+}
+
+@keyframes caminarlimingatras {
+    100%  {transform: translate(-990px);}
+}
+
+@keyframes desaparecer {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes regaloliming2 {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes aparecerYExpandir {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 100vw;
+        height: 100vh;
+        opacity: 1;
+    }
+}
+
+@keyframes caerNieve {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
 }
